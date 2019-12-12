@@ -3,8 +3,8 @@
 #
 # Script for releasing new versions
 # Handles version updating and publishing to:
-# 	- GitHub 
-# 	- NPM 
+# 	- GitHub
+# 	- NPM
 #
 
 # check package version
@@ -40,8 +40,8 @@ else
 	git commit -am "v$VERSION"
 	git tag v$VERSION -f
 fi
-	
+
 git push --tags -f
 git push
 
-npm publish
+npm publish --access public
